@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #FFFFFF;
+}
+
+header {
+    background-color: #25496B;
+    text-align: center;
+    font-size: 10px;
+    padding: 10px;
+}
+
+.titulo-sii {
+    color: #FFFF99;
+}
+
+.titulo-tec {
+    color: #EEEEEE;
+}
+
+nav {
+    max-width: 75%;
+    margin: auto;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+ul {
+    list-style: none;
+    background-color: #25496B;
+    border: 1px groove #25496B;
+}
+
+a {
+    text-decoration: none;
+    color: #FFFF99;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main>li>a {
+    display: block;
+    padding: 10px 10px;
+    /* DISEÑO Y TAMAÑO DE <a> EN <ul(1)> */
+}
+
+.main li ul {
+    display: none;
+    position: absolute;
+    width: 160px;
+}
+
+.main li:hover>ul {
+    display: block;
+    margin-top: 1px;
+}
+
+.main li ul li {
+    position: relative;
+    padding: 2.5px 5px;
+}
+
+.main li:hover {
+    background-color: #FFFF99;
+}
+
+.main li:hover>a {
+    color: #25496B;
+}
+
+.main li ul li ul {
+    right: -162px;
+    top: 0px;
+}
+
+.main li ul li ul li {
+    padding: 2.5px 5px;
+}

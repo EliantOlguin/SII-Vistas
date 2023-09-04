@@ -1,0 +1,30 @@
+.main {
+    display: block;
+}
+
+.div-vista {
+    margin: 10px auto;
+    /*margin-top: 100px;*/
+    text-align: center;
+    width: 45%;
+    background-color: #25496B;
+    padding: 20px 0;
+    color: #FFFF99;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+h2 {
+    font-size: 15px;
+    color: #FF8000;
+}
+
+table {
+    margin: 20px auto;
+}
+
+button {
+    margin: auto 10px;
+}
