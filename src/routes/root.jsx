@@ -10,14 +10,14 @@ import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import MenuInformacionBasica from '../components/menu-informacion-basica';
-import MenuInscripciones from '../components/menu-inscripciones';
-import MenuEvaluacionDocente from '../components/menu-evaluacion-docente';
-
 import SchoolIcon from '@mui/icons-material/School';
 
-const settings = ['Perfil', 'Cerrar sesión'];
+import MenuOpc1Mantenimiento from '../components/menu-opc1-mantenimiento';
+import MenuOpc2Consultas from '../components/menu-opc2-consultas';
+import MenuOpc3DocumentosOficiales from '../components/menu-opc3-documentos-oficiales';
+import MenuOpc4Utilerias from '../components/menu-opc4-utilerias';
 
+const settings = ['Perfil', 'Cerrar sesión'];
 
 function Root() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -40,9 +40,12 @@ function Root() {
 
     return (
         <AppBar position="static">
-            <Container maxWidth="xl">
+            {/* Fondo Menú */}
+            <Container maxWidth="xl" sx={{bgcolor: '#25496B'}}>
                 <Toolbar disableGutters>
-                    <SchoolIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+                    {/* Icono y CSS */}
+                    <SchoolIcon sx={{ color: '#FFFF99', display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+                    {/* Letras y CSS */}
                     <Typography
                         variant="h6"
                         noWrap
@@ -54,9 +57,10 @@ function Root() {
                             fontFamily: 'monospace',
                             fontWeight: 700,
                             letterSpacing: '.3rem',
-                            color: 'inherit',
+                            color: '#FFFF99',
                             textDecoration: 'none',
                         }}
+                        title="Regresar a Inicio"
                     >
                         SII
                     </Typography>
@@ -90,9 +94,10 @@ function Root() {
                                 display: { xs: 'block', md: 'none'},
                             }}
                         >
-                            <MenuInformacionBasica />
-                            <MenuInscripciones />
-                            <MenuEvaluacionDocente />
+                            <MenuOpc1Mantenimiento />
+                            <MenuOpc2Consultas />
+                            <MenuOpc3DocumentosOficiales />
+                            <MenuOpc4Utilerias />
                         </Menu>
                     </Box>
                     <SchoolIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
@@ -115,9 +120,10 @@ function Root() {
                         SII
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                        <MenuInformacionBasica />
-                        <MenuInscripciones />
-                        <MenuEvaluacionDocente />
+                        <MenuOpc1Mantenimiento />
+                        <MenuOpc2Consultas />
+                        <MenuOpc3DocumentosOficiales />
+                        <MenuOpc4Utilerias />
                     </Box>
 
                     <Box sx={{ flexGrow: 0 }}>

@@ -4,13 +4,9 @@ import Menu from '@mui/material/Menu';
 import List from '@mui/material/List';
 import Link from '@mui/material/Link';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 
-import QuizIcon from '@mui/icons-material/Quiz';
-import LibraryAddCheckIcon from '@mui/icons-material/LibraryAddCheck';
-
-export default function MenuInformacionBasica() {
+export default function MenuOpc4Utilerias() {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
 
@@ -32,8 +28,9 @@ export default function MenuInformacionBasica() {
                 sx={{ color: 'white' }}
                 variant="contained" disableElevation
             >
-                Evaluación docente
+                Utilerías
             </Button>
+
             <Menu
                 id="basic-menu"
                 anchorEl={anchorEl}
@@ -50,18 +47,13 @@ export default function MenuInformacionBasica() {
                 >
                     <Link href="#" color="inherit" underline="none">
                         <ListItemButton>
-                            <ListItemIcon>
-                                <QuizIcon />
-                            </ListItemIcon>
-                            <ListItemText primary="Realizar evaluación" />
+                            <ListItemText primary="Opción 1" />
                         </ListItemButton>
                     </Link>
+
                     <Link href="#" color="inherit" underline="none">
                         <ListItemButton>
-                            <ListItemIcon>
-                                <LibraryAddCheckIcon />
-                            </ListItemIcon>
-                            <ListItemText primary="Evaluaciones realizadas" />
+                            <ListItemText primary="Opción 2" />
                         </ListItemButton>
                     </Link>
                 </List>

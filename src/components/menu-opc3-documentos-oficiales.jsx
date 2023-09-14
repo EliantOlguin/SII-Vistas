@@ -4,17 +4,12 @@ import Menu from '@mui/material/Menu';
 import List from '@mui/material/List';
 import Link from '@mui/material/Link';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Collapse from '@mui/material/Collapse';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 
-import AssignmentTurnedInIcon from '@mui/icons-material/AssignmentTurnedIn';
-import Groups3Icon from '@mui/icons-material/Groups3';
-import QueryBuilderIcon from '@mui/icons-material/QueryBuilder';
-
-export default function MenuInformacionBasica() {
+export default function MenuOpc3DocumentosOficiales() {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
 
@@ -42,8 +37,9 @@ export default function MenuInformacionBasica() {
                 sx={{ color: 'white' }}
                 variant="contained" disableElevation
             >
-                Inscripciones
+                Documentos Oficiales
             </Button>
+
             <Menu
                 id="basic-menu"
                 anchorEl={anchorEl}
@@ -58,41 +54,71 @@ export default function MenuInformacionBasica() {
                     component="nav"
                     aria-labelledby="nested-list-subheader"
                 >
+                    <Link href="#" color="inherit" underline="none">
+                        <ListItemButton>
+                            <ListItemText primary="Constancias" />
+                        </ListItemButton>
+                    </Link>
+
                     <ListItemButton onClick={handleClickListSeleccionDeMaterias}>
-                        <ListItemIcon>
-                            <AssignmentTurnedInIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="Seleccion de materias" />
+                        <ListItemText primary="Boletas de Calificaciones" />
                         {!openListSeleccionDeMaterias ? <ExpandLess /> : <ExpandMore />}
                     </ListItemButton>
                     <Collapse in={!openListSeleccionDeMaterias} timeout="auto" unmountOnExit>
                         <List component="div" disablePadding>
                             <Link href="#" color="inherit" underline="none">
                                 <ListItemButton sx={{ pl: 4 }}>
-                                    <ListItemText primary="Ene - Jun || Ago - Dic" />
+                                    <ListItemText primary="Individual" />
                                 </ListItemButton>
                             </Link>
+
                             <Link href="#" color="inherit" underline="none">
                                 <ListItemButton sx={{ pl: 4 }}>
-                                    <ListItemText primary="Verano" />
+                                    <ListItemText primary="En Bloque" />
+                                </ListItemButton>
+                            </Link>
+
+                            <Link href="#" color="inherit" underline="none">
+                                <ListItemButton sx={{ pl: 4 }}>
+                                    <ListItemText primary="General" />
+                                </ListItemButton>
+                            </Link>
+                            
+                            <Link href="#" color="inherit" underline="none">
+                                <ListItemButton sx={{ pl: 4 }}>
+                                    <ListItemText primary="Lista de Boletas" />
+                                </ListItemButton>
+                            </Link>
+
+                            <Link href="#" color="inherit" underline="none">
+                                <ListItemButton sx={{ pl: 4 }}>
+                                    <ListItemText primary="Pronabes" />
                                 </ListItemButton>
                             </Link>
                         </List>
                     </Collapse>
+
                     <Link href="#" color="inherit" underline="none">
                         <ListItemButton>
-                            <ListItemIcon>
-                                <Groups3Icon />
-                            </ListItemIcon>
-                            <ListItemText primary="Grupos disponibles" />
+                            <ListItemText primary="Acta de Calificaciones" />
                         </ListItemButton>
                     </Link>
+
                     <Link href="#" color="inherit" underline="none">
                         <ListItemButton>
-                            <ListItemIcon>
-                                <QueryBuilderIcon />
-                            </ListItemIcon>
-                            <ListItemText primary="Horario de reinscripción" />
+                            <ListItemText primary="Certificados" />
+                        </ListItemButton>
+                    </Link>
+
+                    <Link href="#" color="inherit" underline="none">
+                        <ListItemButton>
+                            <ListItemText primary="Cargas Académicas" />
+                        </ListItemButton>
+                    </Link>
+
+                    <Link href="#" color="inherit" underline="none">
+                        <ListItemButton>
+                            <ListItemText primary="Acta Residencia" />
                         </ListItemButton>
                     </Link>
                 </List>

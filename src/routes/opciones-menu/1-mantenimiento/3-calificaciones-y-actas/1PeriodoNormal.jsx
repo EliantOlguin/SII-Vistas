@@ -1,6 +1,6 @@
-import "./MantOpc3.css";
+import "./MantenimientoStyles.css";
 
-export default function ViewMantOpc3() {
+export default function ViewMantCalYActOpc1() {
     return (
         <>
             <div className="div-vista">

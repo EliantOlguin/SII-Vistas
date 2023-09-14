@@ -1,6 +1,6 @@
-import "./MantOpc4.css";
+import "./MantenimientoStyles.css";
 
-export default function ViewMantOpc4() {
+export default function ViewMantInscOpc1() {
     return (
         <div>
             <div className="main">
